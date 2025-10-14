@@ -5,3 +5,4 @@
 /img/**/*.png
 /img/**/*.jpeg
 /img/**/*.gif
+/dashboard/database.php
