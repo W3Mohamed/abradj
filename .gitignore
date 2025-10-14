@@ -1,0 +1,7 @@
+.git/
+.well-known/
+/img/**/*.webp
+/img/**/*.jpg
+/img/**/*.png
+/img/**/*.jpeg
+/img/**/*.gif
