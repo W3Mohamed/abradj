@@ -78,11 +78,32 @@
      <!--====================================================
                         promotion
     =======================================================-->
-    <div class="promotion">
-        <h1>Qu'est-ce qu'une Promotion Immobilière ?</h1>
-        <p>La promotion immobilière est une discipline complexe et structurée qui consiste à concevoir, réaliser et commercialiser des projets immobiliers. Un promoteur immobilier joue un rôle central dans ce processus, en étant responsable de l’acquisition des terrains, du financement, de la supervision des travaux de construction et de la vente des biens immobiliers une fois achevés.</p>
-        <p>Le promoteur doit maîtriser toutes les étapes du projet, depuis la sélection de l’emplacement jusqu’à la remise des clés aux propriétaires, en garantissant que chaque phase respecte les normes de qualité et les délais impartis. Cette rigueur et cette organisation sont essentielles pour assurer la satisfaction des futurs propriétaires.</p>
-    </div>
+    <section class="promotion">
+        <div class="promotion-content">
+            <h1>Qu'est-ce qu'une Promotion Immobilière ?</h1>
+            <p>La promotion immobilière est une discipline complexe et structurée qui consiste à concevoir, réaliser et commercialiser des projets immobiliers. Un promoteur immobilier joue un rôle central dans ce processus, en étant responsable de l'acquisition des terrains, du financement, de la supervision des travaux de construction et de la vente des biens immobiliers une fois achevés.</p>
+            <p>Le promoteur doit maîtriser toutes les étapes du projet, depuis la sélection de l'emplacement jusqu'à la remise des clés aux propriétaires, en garantissant que chaque phase respecte les normes de qualité et les délais impartis. Cette rigueur et cette organisation sont essentielles pour assurer la satisfaction des futurs propriétaires.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">🏗️</div>
+                    <div class="step-title">Conception & Planification</div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">💰</div>
+                    <div class="step-title">Financement & Investissement</div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">👷</div>
+                    <div class="step-title">Construction & Supervision</div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🏠</div>
+                    <div class="step-title">Commercialisation & Vente</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--====================================================
                         projet
     =======================================================-->
@@ -97,71 +118,123 @@
                         <div class="texte">
                             <h3><?=$row['libelle']?></h3>
                             <p><?=$row['adresse']?></p>
-                            <a href="projet.php?id_projet=<?=$row['id_projet']?>" class="button">Voir Plus</a>
+                            <a href="projet.php?id_projet=<?=$row['id_projet']?>" class="button">Découvrir</a>
                         </div>
                     </li>
                     <?php } ?>
                 </ul>
             </div>
+             <!-- Navigation personnalisée -->
+            <div class="slide-info">
+                <div class="slide-counter">
+                    <span class="current-slide">1</span> / <span class="total-slides">3</span>
+                </div>
+            </div>
         </section>
-        
-
-        
-
     </div>
     <!--====================================================
                         vision
     =======================================================-->
-    <div class="vision propos">
-        <div class="champ">
-            <div class="centre">
-                <img src="img/vision.webp" alt="Vision Abraj Iskan promotion immobiliere">
+    <section class="vision-section">
+        <div class="vision-grid">
+            <!-- Partie visuelle -->
+            <div class="vision-visual">
+                <div class="vision-badge">Notre Engagement</div>
+                <div class="vision-image-container">
+                    <img src="img/vision.webp" alt="Vision Abraj Iskan promotion immobiliere" class="vision-image">
+                </div>
+            </div>
+            
+            <!-- Partie contenu -->
+            <div class="vision-content">
+                <h1 class="vision-title">Notre vision</h1>
+                
+                <p class="vision-text">
+                    Notre vocation principale est de transcender les attentes en matière de logement en offrant des résidences 
+                    haut de gamme qui allient élégance, fonctionnalité et durabilité.
+                </p>
+                
+                <p class="vision-text">
+                    Nous comprenons l'importance de créer des espaces qui vont au-delà de simples structures, mais qui incarnent 
+                    véritablement le concept de foyer. À chaque étape de nos projets, de la conception initiale à la réalisation 
+                    finale, nous maintenons un engagement ferme envers l'excellence.
+                </p>
+                
+                <div class="vision-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Ans d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction client</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5★</span>
+                        <span class="stat-label">Qualité garantie</span>
+                    </div>
+                </div>
+                
+                <a href="service.php" class="vision-cta">
+                    Découvrir notre expertise
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
-        <div class="champ">
-            <h1>Notre vision</h1>
-            <p>Notre vocation principale est de transcender les attentes en matière de logement en offrant des résidences haut de gamme 
-                qui allient élégance, fonctionnalité et durabilité. Nous comprenons l'importance de créer des espaces qui vont au-delà 
-                de simples structures, mais qui incarnent véritablement le concept de foyer.Notre vocation principale est de transcender 
-                les attentes en matière de logement en offrant des résidences haut de gamme qui allient élégance, fonctionnalité et 
-                durabilité. Nous comprenons l'importance de créer des espaces qui vont au-delà de simples structures, mais qui incarnent 
-                véritablement le concept de foyer.</p>
-            <p>À chaque étape de nos projets, de la conception initiale à la réalisation finale, nous maintenons un engagement ferme 
-                envers l'excellence. Notre équipe talentueuse d'architectes, d'urbanistes et de professionnels de la construction
-                 travaille de concert pour donner vie à des environnements résidentiels exceptionnels, reflétant les plus hauts standards 
-                 de qualité et de design.</p>
-                <div class="wrap">
-                    <a href="service.php" class="button">Voir plus</a>
-                </div>
-        </div>
-    </div>
+    </section>
     <!--====================================================
                         actualite
     =======================================================-->
     <div class="actualite">
-        <h4>Innover l'Immobilier, Créer des Résidences Uniques</h4>
-        <h1>Actualités</h1>
-        <section class="splide" id="actuSlide" aria-label="Splide Basic HTML Example">
+        <div class="actualite-header">
+            <span class="actualite-subtitle">Innover l'Immobilier, Créer des Résidences Uniques</span>
+            <h1 class="actualite-title">Actualités</h1>
+            <p class="actualite-description">Découvrez les dernières nouveautés et projets de Abraj Iskan</p>
+        </div>
+        
+        <section class="splide actualite-slider" id="actuSlide" aria-label="Actualités Abraj Iskan">
             <div class="splide__track">
-                    <ul class="splide__list">
-                        <?php
-                            $sqlBlog = $pdo->prepare('SELECT * FROM blog');
-                            $sqlBlog->execute();
-                            $blogs = $sqlBlog->fetchAll();
-                            foreach($blogs as $blog){
-                                $date = new DateTime($blog['datetime']);
-                        ?>
-                        <li class="splide__slide">
-                            <a href="actualite.php?id_blog=<?=$blog['id_blog']?>" class="actu">
+                <ul class="splide__list">
+                    <?php
+                        $sqlBlog = $pdo->prepare('SELECT * FROM blog ORDER BY datetime DESC');
+                        $sqlBlog->execute();
+                        $blogs = $sqlBlog->fetchAll();
+                        foreach($blogs as $blog){
+                            $date = new DateTime($blog['datetime']);
+                            // Extraire un extrait du contenu pour l'affichage
+                            $excerpt = strip_tags($blog['contenu']);
+                            $excerpt = strlen($excerpt) > 120 ? substr($excerpt, 0, 120) . '...' : $excerpt;
+                    ?>
+                    <li class="splide__slide">
+                        <a href="actualite.php?id_blog=<?=$blog['id_blog']?>" class="actu">
+                            <div class="actu-image-container">
                                 <img src="img/actu/<?=$blog['image']?>" alt="<?=$blog['titre']?>">
-                                <h3><?=$blog['titre']?></h3>
-                                <div class="date">
+                                <div class="actu-overlay"></div>
+                                <div class="actu-date">
                                     <p><?=$date->format('d M')?></p>
                                 </div>
-                            </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
+                                <div class="actu-category">Immobilier</div>
+                            </div>
+                            <div class="actu-content">
+                                <h3><?=$blog['titre']?></h3>
+                                <p class="actu-excerpt"><?=$excerpt?></p>
+                                <span class="actu-cta">
+                                    Lire la suite
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ul>
             </div>
         </section>
     </div>
@@ -169,27 +242,63 @@
                         partenaire
     =======================================================-->
     <div class="partenaire">
-        <h4>Innover l'Immobilier, Créer des Résidences Uniques</h4>
-        <h1>Nos partenaire</h1>
+        <div class="partenaire-header">
+            <span class="partenaire-subtitle">Innover l'Immobilier, Créer des Résidences Uniques</span>
+            <h1 class="partenaire-title">Nos Partenaires</h1>
+            <p class="partenaire-description">Des collaborations d'excellence pour des projets d'exception</p>
+        </div>
         <?php
             $sqlPart = $pdo->prepare('SELECT * FROM partenaire');
             $sqlPart->execute();
             $parts = $sqlPart->fetchAll();
         ?>
-        <section class="splide" id="partSlide" aria-label="Splide Basic HTML Example">
+        <section class="splide partenaire-slider" id="partSlide" aria-label="Partenaires Abraj Iskan">
             <div class="splide__track">
-                    <ul class="splide__list">
-                        <?php foreach($parts as $part){ ?>
-                        <li class="splide__slide">
-                            <img src="img/partenaire/<?=$part['image']?>" alt="<?=$part['libelle']?>">
-                            <h3><?=$part['libelle']?></h3>
-                        </li>
-                        <?php } ?>
-                    </ul>
+                <ul class="splide__list">
+                    <?php foreach($parts as $part){ ?>
+                    <li class="splide__slide">
+                        <div class="partenaire-card">
+                            <div class="confiance-badge">Partenaire</div>
+                            <div class="partenaire-logo-container">
+                                <img src="img/partenaire/<?=$part['image']?>" alt="Partenaire <?=$part['libelle']?>" class="partenaire-logo" loading="lazy">
+                            </div>
+                            <h3 class="partenaire-name"><?=$part['libelle']?></h3>
+                            <div class="partenaire-type">Partenaire Privilégié</div>
+                            <p class="partenaire-description-short">Collaboration d'excellence depuis plusieurs années</p>
+                        </div>
+                    </li>
+                    <?php } ?>
+                </ul>
             </div>
         </section>
+        
+        <div class="confiance-section">
+            <h3 class="confiance-title">Une confiance mutuelle</h3>
+            <p style="color: #9ca3af; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                Nous collaborons avec les meilleurs partenaires pour garantir la qualité et l'excellence de nos projets immobiliers
+            </p>
+            
+            <div class="confiance-stats">
+                <div class="confiance-stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Partenaires</span>
+                </div>
+                <div class="confiance-stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projets réalisés</span>
+                </div>
+                <div class="confiance-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+                <div class="confiance-stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Ans de collaboration</span>
+                </div>
+            </div>
+        </div>
     </div>
-        <!--====================================================
+    <!--====================================================
                         caracteristique
     =======================================================-->
     <div class="carac">
@@ -288,6 +397,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    
     <script>
         document.addEventListener( 'DOMContentLoaded', function() {
             var splide = new Splide( '.splide',{
@@ -299,71 +409,85 @@
             splide.mount();
         } );
     </script>
+    
     <script>
-        var splide = new Splide( '#projet-slider', {
+        var splide = new Splide('#projet-slider', {
+            type: 'loop',
             perPage: 3,
-            focus  : 0,
-            type   : 'loop',
-            gap : '10px',
-            omitEnd: true,
+            focus: 0,
+            gap: '30px',
+            pagination: true,
+            arrows: true,
+            pauseOnHover: true,
+            autoplay: false,
             breakpoints: {
-                600: {
-                    perPage: 1, // 1 slide visible pour les écrans < 600px
-                    gap: '10px', // Espacement réduit
+                1200: {
+                    perPage: 2,
+                    gap: '20px'
                 },
-                1000: {
-                    perPage: 2, // 2 slides visibles pour les écrans entre 600px et 1000px
-                    gap: '15px', // Espacement ajusté
+                768: {
+                    perPage: 1,
+                    gap: '15px'
                 }
             }
-        } );
-        splide.mount();
+        });
+
+        // Mise à jour du compteur
+        splide.on('mounted move', function() {
+            var current = splide.index + 1;
+            var total = splide.length;
+            document.querySelector('.current-slide').textContent = current;
+            document.querySelector('.total-slides').textContent = total;
+        });
+
+        splide.mount();       
     </script>
+
     <script>
-        var splide = new Splide( '#actuSlide', {
-            type   : 'loop',
+        var splide = new Splide('#actuSlide', {
+            type: 'loop',
             perPage: 3,
-            gap : '30px',
+            gap: '30px',
             perMove: 1,
-            autoplay: true,     // Activer le défilement automatique
-            interval: 2000,     // Temps entre deux diapositives (en millisecondes, ici 3 secondes)
-            pauseOnHover: false,
+            autoplay: true,
+            interval: 4000,
+            pauseOnHover: true,
             breakpoints: {
-                600: {
-                    perPage: 1, // 1 slide visible pour les écrans < 600px
-                    gap: '10px', // Espacement réduit
+                768: {
+                    perPage: 2,
+                    gap: '20px'
                 },
-                1000: {
-                    perPage: 2, // 2 slides visibles pour les écrans entre 600px et 1000px
-                    gap: '15px', // Espacement ajusté
+                480: {
+                    perPage: 1,
+                    gap: '15px'
                 }
             }
-        } );
-
-            splide.mount();
-    </script>
-    <script>
-        var splide = new Splide( '#partSlide', {
-            type   : 'loop',
-            drag   : 'free',
-            perPage: 5,
-            gap : '30px',
-            autoplay: true,     // Activer le défilement automatique
-            interval: 3000,     // Temps entre deux diapositives (en millisecondes, ici 3 secondes)
-            pauseOnHover: false,
-            breakpoints: {
-                600: {
-                    perPage: 2, // 1 slide visible pour les écrans < 600px
-                    gap: '10px', // Espacement réduit
-                },
-                1000: {
-                    perPage: 4, // 2 slides visibles pour les écrans entre 600px et 1000px
-                    gap: '15px', // Espacement ajusté
-                }
-            }
-        } );
-
+        });
         splide.mount();
     </script>
+
+    <script>
+        var splide = new Splide('#partSlide', {
+            type: 'loop',
+            drag: 'free',
+            perPage: 5,
+            gap: '30px',
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: true,
+            breakpoints: {
+                768: {
+                    perPage: 3,
+                    gap: '20px'
+                },
+                480: {
+                    perPage: 2,
+                    gap: '15px'
+                }
+            }
+        });
+        splide.mount();
+    </script>
+    
 </body>
 </html>
