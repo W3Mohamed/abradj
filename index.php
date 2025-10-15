@@ -56,25 +56,25 @@
     <!--====================================================
                         propos
     =======================================================-->
-    <div class="propos">
-        <div class="champ">
-            <h1>Qui somme nous ?</h1>
-            <p>Groupe ABRAJ ISKAN PROMOTION IMMOBILIERE  Une entreprise avec une longue expérience dans le domaine de la construction 
-                de divers logements, spécialisée dans la promotion immobilière et investisement immobiliere  , met en vente des 
-                appartements de qualité haut gamme  et architecture moderne et new classique selon le choix des clients qui ouvre 
-                la possibilité d’obtenir votre maison de rêve .</p>
-            <p>ABRAJ  ISKAN  a le plaisir de vous présenter Ses  nouvelles résidences C’est des ensembles résidentielles  Hauts 
-                Standings situés dans des quartiers les plus prisés d’Alger , Blida du centre villes ou il y a tous les comodite de vivre .</p>
-                <div class="wrap">
-                    <a href="about.php" class="button">Voir plus</a>
-                </div>
-        </div>
-        <div class="champ">
-            <div class="centre">
-                <img src="img/propos.webp" alt="A propos promotion immobiliere Abraj Iskan ">
+    <section class="propos">
+        <div class="champ champ-texte">
+            <h1>Qui sommes-nous ?</h1>
+            <p>Groupe ABRAJ ISKAN PROMOTION IMMOBILIERE - Une entreprise avec une longue expérience dans le domaine de la construction 
+                de divers logements, spécialisée dans la promotion immobilière et investissement immobilier, met en vente des 
+                appartements de qualité haut gamme et architecture moderne et new classique selon le choix des clients qui ouvre 
+                la possibilité d'obtenir votre maison de rêve.</p>
+            <p>ABRAJ ISKAN a le plaisir de vous présenter ses nouvelles résidences. Ce sont des ensembles résidentiels Hauts 
+                Standings situés dans des quartiers les plus prisés d'Alger, Blida du centre villes où il y a toutes les commodités de vivre.</p>
+            <div class="wrap">
+                <a href="about.php" class="button">Voir plus</a>
             </div>
         </div>
-    </div>
+        <div class="champ champ-image">
+            <div class="image-container">
+                <img src="img/propos.webp" alt="A propos promotion immobiliere Abraj Iskan">
+            </div>
+        </div>
+    </section>
      <!--====================================================
                         promotion
     =======================================================-->
