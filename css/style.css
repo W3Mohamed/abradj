@@ -1460,7 +1460,7 @@ ul li.dropdown:hover .dropdown-menu {
 /* Slider amélioré */
 .actualite-slider {
     position: relative;
-    margin: 0 -20px;
+    margin: 0;
 }
 
 .splide__arrow {
@@ -1732,9 +1732,6 @@ ul li.dropdown:hover .dropdown-menu {
 /*==============================================================
                         partenaire
 ==================================================================*/
-/*==============================================================
-                        partenaire
-==================================================================*/
 .partenaire {
     padding: 120px 8%;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
@@ -1803,7 +1800,7 @@ ul li.dropdown:hover .dropdown-menu {
 /* Slider partenaires */
 .partenaire-slider {
     position: relative;
-    margin: 0 -20px;
+    margin: 0;
     z-index: 2;
 }
 
