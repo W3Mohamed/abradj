@@ -20,38 +20,110 @@
         require_once('dashboard/database.php');
     ?>
     <?php include('partie/navbar.php') ?>
-
-    <div class="header">
-        <section class="splide" aria-labelledby="carousel-heading">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <?php
-                        $sqlStates = $pdo->prepare('SELECT * FROM projet');
-                        $sqlStates->execute();
-                        $rows = $sqlStates->fetchAll();
-                        foreach($rows as $row){
-                    ?>
-                    <li class="splide__slide">
-                        <div class="slide-content">
-                            <img src="img/projet/<?=$row['img_principale']?>" alt="<?=$row['libelle']?>">
-                            <div class="overlay"></div>
-                            <div class="text">
-                                <h4>Abraj Iskan</h4>
-                                <h1 class="animation-text"><?=$row['libelle']?></h1>
-                                <a href="projet.php?id_projet=<?=$row['id_projet']?>" class="learn-more">
-                                    <span class="circle" aria-hidden="true">
-                                    <span class="icon arrow"></span>
-                                    </span>
-                                    <span class="button-text">Voir plus</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <?php } ?>
-
-                </ul>
+    <?php
+        $sqlStates = $pdo->prepare('SELECT * FROM projet');
+        $sqlStates->execute();
+        $rows = $sqlStates->fetchAll();
+    ?>
+    <!--=====================================================
+                        header
+    =======================================================-->
+    <div class="hero-section">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down">
+                    <span class="badge-icon">⭐</span>
+                    <span>Promoteur Immobilier de Confiance</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    Abraj <span class="highlight">Iskan</span>
+                </h1>
+                
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Construisons ensemble votre avenir dans des résidences d'exception
+                </p>
+                
+                <div class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    <p>Découvrez nos projets immobiliers haut de gamme qui allient confort, modernité et qualité de vie exceptionnelle</p>
+                </div>
+                
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projet" class="btn-primary">
+                        <span class="btn-text">Découvrir nos projets</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                    
+                    <a href="#contact" class="btn-secondary">
+                        <span class="btn-text">Nous contacter</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Clients satisfaits</div>
+                    </div>
+                </div>
             </div>
-        </section>
+            
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-image-container">
+                    <div class="image-wrapper">
+                        <img src="img/hero.jpg" alt="Abraj Iskan - Promotion Immobilière" class="hero-main-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🏠</div>
+                        <div class="card-content">
+                            <div class="card-title">Résidences Modernes</div>
+                            <div class="card-subtitle">Designs contemporains</div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-card card-2">
+                        <div class="card-icon">✓</div>
+                        <div class="card-content">
+                            <div class="card-title">Qualité Premium</div>
+                            <div class="card-subtitle">Matériaux haut de gamme</div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-card card-3">
+                        <div class="card-icon">📍</div>
+                        <div class="card-content">
+                            <div class="card-title">Emplacements Stratégiques</div>
+                            <div class="card-subtitle">Quartiers prisés</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-line"></div>
+        </div>
     </div>
     <!--====================================================
                         propos
@@ -123,12 +195,6 @@
                     </li>
                     <?php } ?>
                 </ul>
-            </div>
-             <!-- Navigation personnalisée -->
-            <div class="slide-info">
-                <div class="slide-counter">
-                    <span class="current-slide">1</span> / <span class="total-slides">3</span>
-                </div>
             </div>
         </section>
     </div>
@@ -271,69 +337,68 @@
                 </ul>
             </div>
         </section>
-        
-        <div class="confiance-section">
-            <h3 class="confiance-title">Une confiance mutuelle</h3>
-            <p style="color: #9ca3af; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                Nous collaborons avec les meilleurs partenaires pour garantir la qualité et l'excellence de nos projets immobiliers
-            </p>
-            
-            <div class="confiance-stats">
-                <div class="confiance-stat">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Partenaires</span>
-                </div>
-                <div class="confiance-stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projets réalisés</span>
-                </div>
-                <div class="confiance-stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Satisfaction</span>
-                </div>
-                <div class="confiance-stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Ans de collaboration</span>
-                </div>
-            </div>
-        </div>
     </div>
     <!--====================================================
                         caracteristique
     =======================================================-->
     <div class="carac">
-        <h1>Caractéristique</h1>
+        <h1>Caractéristiques</h1>
+        <p class="carac-subtitle">Découvrez les prestations haut de gamme qui font la différence</p>
+        
         <div class="caracs">
-            <div class="item">
-                <img src="icon/meuble.png" alt="Appartements meublés">
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/meuble.png" alt="Appartements meublés">
+                </div>
                 <h3>Appartements meublés</h3>
             </div>
-            <div class="item">
-                <img src="icon/perso.png" alt="Personnalisation">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/perso.png" alt="Personnalisation">
+                </div>
                 <h3>Personnalisation</h3>
             </div>
-            <div class="item">
-                <img src="icon/reliability.png" alt="Matériaux haut de gamme">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/reliability.png" alt="Matériaux haut de gamme">
+                </div>
                 <h3>Matériaux haut de gamme</h3>
             </div>
-            <div class="item">
-                <img src="icon/window.png" alt="Double vitrage">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/window.png" alt="Double vitrage">
+                </div>
                 <h3>Double vitrage</h3>
             </div>
-            <div class="item">
-                <img src="icon/temperature.png" alt="Chauffage et climatisation centralisés">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/temperature.png" alt="Chauffage et climatisation centralisés">
+                </div>
                 <h3>Chauffage et climatisation centralisés</h3>
             </div>
-            <div class="item">
-                <img src="icon/3d-house.png" alt="Domotique Smart Home">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/3d-house.png" alt="Domotique Smart Home">
+                </div>
                 <h3>Domotique Smart Home</h3>
             </div>
-            <div class="item">
-                <img src="icon/parking.png" alt="Service voiturier">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/parking.png" alt="Service voiturier">
+                </div>
                 <h3>Service voiturier</h3>
             </div>
-            <div class="item">
-                <img src="icon/bed.png" alt="Espaces communs modernes">
+            
+            <div class="carac-item">
+                <div class="carac-icon">
+                    <img src="icon/bed.png" alt="Espaces communs modernes">
+                </div>
                 <h3>Espaces communs modernes</h3>
             </div>
         </div>
@@ -342,48 +407,90 @@
                         contect
     =======================================================-->
     <div class="contact" id="contact">
-        <div class="info">
-            <h3>Contactez nous</h3>
-            <form method="POST">
-                <input type="text" name="nom" placeholder="Nom" required>
-                <input type="tel" name="tel" placeholder="N° Téléphone" required>
-                <input type="email" name="email" placeholder="Email">
-                <select name="projet" id="projet">
-                    <?php
-                       
-                        foreach($rows as $row){
-                    ?>
-                    <option value="<?=$row['libelle']?>"><?=$row['libelle']?></option>
-                    <?php } ?>
-                </select>
-                <textarea name="message" id="message" placeholder="Message"></textarea>
-                <input type="submit" name="envoyer" value="Envoyer">
-            </form>
-            <?php
-                if(isset($_POST['envoyer'])){
-                    $nom = $_POST['nom'];
-                    $tel = $_POST['tel'];
-                    $email = $_POST['email'];
-                    $projet = $_POST['projet'];
-                    $message = $_POST['message'];
+        <div class="contact-container">
+            <!-- Partie formulaire -->
+            <div class="contact-form-section">
+                <h3 class="contact-title">Contactez-nous</h3>
+                <p class="contact-subtitle">Un projet en tête ? Discutons de votre future résidence</p>
+                
+                <form method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="nom" placeholder="Votre nom complet" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" name="tel" placeholder="Numéro de téléphone" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Adresse email" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="projet" id="projet" class="form-select">
+                            <option value="" disabled selected>Choisissez un projet</option>
+                            <?php foreach($rows as $row){ ?>
+                            <option value="<?=$row['libelle']?>"><?=$row['libelle']?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Votre message..." class="form-textarea"></textarea>
+                    </div>
+                    
+                    <button type="submit" name="envoyer" class="form-submit">
+                        Envoyer le message
+                    </button>
+                </form>
+                
+                <?php
+                    if(isset($_POST['envoyer'])){
+                        $nom = $_POST['nom'];
+                        $tel = $_POST['tel'];
+                        $email = $_POST['email'];
+                        $projet = $_POST['projet'];
+                        $message = $_POST['message'];
 
-                    $sqlContact = $pdo->prepare('INSERT INTO visite(nom,tel,email,id_projet,message) VALUES(?,?,?,?,?)');
-                    $sqlContact->execute([$nom,$tel,$email,$projet,$message]);
-                    ?>
-                    <script> swal("Merci pour votre message", "Merci pour votre intérêt. Nous vous répondrons rapidement.", "success"); </script> <?php
-
-                }
-            ?>
-        </div>
-        <div class="info">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3207.773088959983!2d2.82944607418515!3d36.487196285283744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDI5JzEzLjkiTiAywrA0OSc1NS4zIkU!5e0!3m2!1sfr!2sdz!4v1731968443015!5m2!1sfr!2sdz"
-                width="100%" 
-                height="100%" 
-                style="border:0;"
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                        $sqlContact = $pdo->prepare('INSERT INTO visite(nom,tel,email,id_projet,message) VALUES(?,?,?,?,?)');
+                        $sqlContact->execute([$nom,$tel,$email,$projet,$message]);
+                        ?>
+                        <script> 
+                            swal("Merci pour votre message", "Merci pour votre intérêt. Nous vous répondrons rapidement.", "success"); 
+                        </script> 
+                        <?php
+                    }
+                ?>
+            </div>
+            
+            <!-- Partie carte -->
+            <div class="contact-map-section">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3207.773088959983!2d2.82944607418515!3d36.487196285283744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDI5JzEzLjkiTiAywrA0OSc1NS4zIkU!5e0!3m2!1sfr!2sdz!4v1731968443015!5m2!1sfr!2sdz"
+                    class="contact-map"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <div class="map-overlay"></div>
+                
+                <div class="contact-info">
+                    <h4 class="contact-info-title">Abraj Iskan</h4>
+                    <div class="contact-info-item">
+                        <span>📍</span>
+                        <span><?=$info['adresse']?></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <span>📞</span>
+                        <span>+213 <?=$info['tel1']?></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <span>✉️</span>
+                        <span><?=$info['email']?></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--=========================================================
@@ -397,18 +504,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    
-    <script>
-        document.addEventListener( 'DOMContentLoaded', function() {
-            var splide = new Splide( '.splide',{
-                type   : 'loop',
-               // autoplay: true,     // Activer le défilement automatique
-                //interval: 4000,     // Temps entre deux diapositives (en millisecondes, ici 3 secondes)
-                pauseOnHover: false
-            } );
-            splide.mount();
-        } );
-    </script>
     
     <script>
         var splide = new Splide('#projet-slider', {
