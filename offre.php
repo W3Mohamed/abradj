@@ -29,43 +29,84 @@
 
         include('partie/navbar.php') 
     ?>
-    <div class="page-offre">
 
-        <section class="splide" aria-label="Splide Basic HTML Example">
-            <div class="splide__track">
+    <div class="page-offre-detail">
+        <!-- Gallery moderne -->
+        <div class="offre-detail-gallery">
+            <section class="splide" aria-label="Galerie de l'offre">
+                <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <img src="img/offres/<?=$row['image']?>" alt="<?=$row['libelle']?>">
                         </li>
                         <?php
-                            for( $i=2; $i < 10 ; $i++){ 
-                                if(isset($row['img'.$i])){
+                            for($i = 2; $i < 10; $i++){ 
+                                if(isset($row['img'.$i]) && !empty($row['img'.$i])){
                         ?>
                         <li class="splide__slide">
                             <img src="img/offres/<?=$row['img'.$i]?>" alt="<?=$row['libelle']?>">
                         </li>
                         <?php } } ?>
                     </ul>
-            </div>
-        </section>
-
-        <div class="produit">
-            <h1><?=$row['libelle']?></h1>
-            <h5><?=$row['type']?></h5>
-            <p><?=$row['adresse']?></p>
-            <h4><?=$row['prix']?></h4>
-            <div class="desc">
-                <p><?=nl2br($row['description'])?></div>
-            <div class="call">
-                <a href="tel:0<?=$info['tel2']?>" style="background-color:#007BFF"><img src="icon/phone.png">Appelez</a>
-                <a href="https://wa.me/0<?=$info['tel1']?>?text=Bonjour,%20je%20suis%20interesse" style="background-color:#28A745"><img src="icon/whatsapp.png">Whatsapp</a>
-                <a href="mailto:<?=$info['email']?>" style="background-color:#FFC107"><img src="icon/mail.png">Evoie un mail</a>
-            </div>
+                </div>
+            </section>
+            <div class="offre-detail-gallery-overlay"></div>
         </div>
 
+        <!-- Contenu principal -->
+        <div class="offre-detail-content">
+            <!-- En-tête de l'offre -->
+            <div class="offre-detail-header">
+                <h1 class="offre-detail-title"><?=$row['libelle']?></h1>
+                <span class="offre-detail-type"><?=$row['type']?></span>
+                <div class="offre-detail-location">
+                    <?=$row['adresse']?>
+                </div>
+                <span class="offre-detail-price"><?=$row['prix']?></span>
+            </div>
 
+            <!-- Description -->
+            <div class="offre-detail-description">
+                <h3>Description</h3>
+                <p><?=nl2br($row['description'])?></p>
+            </div>
+
+            <!-- Actions de contact -->
+            <div class="offre-detail-actions">
+                <h3>Intéressé par cette offre ?</h3>
+                <div class="detail-contact-buttons">
+                    <a href="tel:0<?=$info['tel2']?>" class="detail-contact-button phone">
+                        <img src="icon/phone.png" alt="Téléphone">
+                        <span>Appelez-nous</span>
+                    </a>
+                    <a href="https://wa.me/0<?=$info['tel1']?>?text=Bonjour,%20je%20suis%20intéressé%20par%20l'offre%20:%20<?=urlencode($row['libelle'])?>" class="detail-contact-button whatsapp">
+                        <img src="icon/whatsapp.png" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:<?=$info['email']?>?subject=Demande%20d'information%20-%20<?=urlencode($row['libelle'])?>" class="detail-contact-button email">
+                        <img src="icon/mail.png" alt="Email">
+                        <span>Envoyer un email</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Informations supplémentaires -->
+            <div class="offre-detail-infos">
+                <div class="detail-info-card">
+                    <h4>📍 Localisation Premium</h4>
+                    <p>Situé dans un quartier privilégié avec accès à toutes les commodités</p>
+                </div>
+                <div class="detail-info-card">
+                    <h4>🏠 Standing Élevé</h4>
+                    <p>Matériaux de qualité et finitions haut de gamme</p>
+                </div>
+                <div class="detail-info-card">
+                    <h4>⚡ Livraison Rapide</h4>
+                    <p>Projet disponible dans les meilleurs délais</p>
+                </div>
+            </div>
+        </div>
     </div>
-
 
     <!--=========================================================
                         footer
@@ -78,25 +119,22 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-        var splide = new Splide( '.splide', {
-            type   : 'loop',
-            perPage: 3,
-            perMove: 1,
-            gap: '10px',
-            breakpoints: {
-                500: {
-                    perPage: 1, // 1 slide visible pour les écrans < 600px
-                    gap: '10px', // Espacement réduit
-                },
-                900: {
-                    perPage: 2, // 2 slides visibles pour les écrans entre 600px et 1000px
-                    gap: '15px', // Espacement ajusté
-                }
-            }
-        } );
 
-        splide.mount();
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialisation du slider gallery
+            var gallerySplide = new Splide('.offre-detail-gallery .splide', {
+                type: 'fade',
+                rewind: true,
+                pagination: true,
+                arrows: true,
+                autoplay: true,
+                interval: 5000,
+                pauseOnHover: true,
+                pauseOnFocus: true
+            });
+            gallerySplide.mount();
+        });
     </script>
 
 </body>
