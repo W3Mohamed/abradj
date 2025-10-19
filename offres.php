@@ -28,10 +28,11 @@
         </div>
     </div>
 
-    <!-- Section offres principale -->
     <section class="page-offres">
-        <h1>Voir nos offres</h1>
-        <p>Votre futur appartement vous attend ! Découvrez notre large sélection d'appartements à Alger allant du F2 au F5 duplex situés dans des quartiers dynamiques et paisibles. Que vous recherchiez un pied-à-terre ou une résidence principale, nous avons le bien qui correspond à vos besoins et à votre budget.</p>
+        <div class="offres-header">
+            <h1>Voir nos offres</h1>
+            <p>Découvrez notre sélection exclusive d'appartements à Alger, allant du F2 au F5 duplex, situés dans les quartiers les plus prisés de la capitale.</p>
+        </div>
         
         <!-- Grid des offres -->
         <div class="offres">
@@ -42,28 +43,50 @@
                 
                 if(count($rows) > 0) {
                     foreach($rows as $row){
+                        // Préparation des données avec limites de caractères
+                        $titre = $row['libelle'];
+                        $description = $row['description'];
+                        $prix = $row['prix'];
+                        
+                        // Limiter le titre à 50 caractères
+                        if(strlen($titre) > 50) {
+                            $titre = substr($titre, 0, 50) . '...';
+                        }
+                        
+                        // Limiter la description à 120 caractères
+                        if(strlen($description) > 120) {
+                            $description = substr($description, 0, 120) . '...';
+                        }
+                        
+                        // Limiter le prix à 30 caractères
+                        if(strlen($prix) > 30) {
+                            $prix = substr($prix, 0, 30) . '...';
+                        }
             ?>
             <div class="offre">
                 <a href="offre.php?id_offre=<?=$row['id_offre']?>">
                     <div class="offre-image">
                         <img src="img/offres/<?=$row['image']?>" alt="<?=$row['libelle']?>">
-                        <div class="offre-badge">Nouveau</div>
+                        <div class="offre-badges">
+                            <div class="offre-badge">Exclusivité</div>
+                            <div class="offre-badge status">Disponible</div>
+                        </div>
                     </div>
                     
                     <div class="offre-content">
-                        <h2><?=$row['libelle']?></h2>
-                        <h5><?=$row['type']?></h5>
+                        <h2><?=htmlspecialchars($titre)?></h2>
+                        <span class="offre-type"><?=$row['type']?></span>
                         
                         <div class="offre-location">
                             <?=$row['adresse']?>
                         </div>
                         
-                        <p>Appartement spacieux et lumineux dans un quartier privilégié. Proche de tous les commodités et transports.</p>
+                        <p class="offre-description"><?=htmlspecialchars($description)?></p>
                         
-                        <span class="offre-price"><?=$row['prix']?></span>
+                        <span class="offre-price"><?=htmlspecialchars($prix)?></span>
                         
                         <button class="offre-button">
-                            Je veux en savoir plus
+                            Découvrir cette offre
                         </button>
                     </div>
                 </a>
@@ -73,12 +96,13 @@
                 } else { 
             ?>
             <div class="offres-empty">
-                <h3>Aucune offre disponible</h3>
-                <p>Revenez bientôt pour découvrir nos nouvelles offres</p>
+                <h3>Aucune offre disponible pour le moment</h3>
+                <p>Nos nouvelles offres arrivent bientôt. Revenez nous visiter.</p>
             </div>
             <?php } ?>
         </div>
     </section>
+
  
     <!--====================================================
                         contact
