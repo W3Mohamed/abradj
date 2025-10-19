@@ -31,7 +31,7 @@
     ?>
 
     <div class="page-offre-detail">
-        <!-- Gallery moderne -->
+        <!-- Gallery immersive -->
         <div class="offre-detail-gallery">
             <section class="splide" aria-label="Galerie de l'offre">
                 <div class="splide__track">
@@ -51,6 +51,9 @@
                 </div>
             </section>
             <div class="offre-detail-gallery-overlay"></div>
+            
+            <!-- Badge urgence -->
+            <div class="urgence-badge">Offre Exclusive</div>
         </div>
 
         <!-- Contenu principal -->
@@ -67,25 +70,27 @@
 
             <!-- Description -->
             <div class="offre-detail-description">
-                <h3>Description</h3>
+                <h3>Description du Bien</h3>
                 <p><?=nl2br($row['description'])?></p>
             </div>
 
-            <!-- Actions de contact -->
-            <div class="offre-detail-actions">
-                <h3>Intéressé par cette offre ?</h3>
+            <!-- Section CTA percutante -->
+            <div class="offre-detail-cta">
+                <h3>🚀 Ne laissez pas cette opportunité vous échapper !</h3>
+                <p>Ce bien exceptionnel suscite un vif intérêt. Contactez-nous dès maintenant pour une visite privée et sécurisez votre futur chez vous.</p>
+                
                 <div class="detail-contact-buttons">
                     <a href="tel:0<?=$info['tel2']?>" class="detail-contact-button phone">
-                        <img src="icon/phone.png" alt="Téléphone">
-                        <span>Appelez-nous</span>
+                        <img src="icon/phone.png" alt="Téléphone" class="button-icon">
+                        <span>📞 Appel Immédiat</span>
                     </a>
-                    <a href="https://wa.me/0<?=$info['tel1']?>?text=Bonjour,%20je%20suis%20intéressé%20par%20l'offre%20:%20<?=urlencode($row['libelle'])?>" class="detail-contact-button whatsapp">
-                        <img src="icon/whatsapp.png" alt="WhatsApp">
-                        <span>WhatsApp</span>
+                    <a href="https://wa.me/0<?=$info['tel1']?>?text=🚀 Bonjour, je suis TRÈS intéressé par l'offre : <?=urlencode($row['libelle'])?> - <?=urlencode($row['prix'])?>" class="detail-contact-button whatsapp">
+                        <img src="icon/whatsapp.png" alt="WhatsApp" class="button-icon">
+                        <span>💬 WhatsApp Express</span>
                     </a>
-                    <a href="mailto:<?=$info['email']?>?subject=Demande%20d'information%20-%20<?=urlencode($row['libelle'])?>" class="detail-contact-button email">
-                        <img src="icon/mail.png" alt="Email">
-                        <span>Envoyer un email</span>
+                    <a href="mailto:<?=$info['email']?>?subject=🚀 URGENT - Demande pour : <?=urlencode($row['libelle'])?>&body=Bonjour, je souhaite réserver une visite pour cette offre au plus vite." class="detail-contact-button email">
+                        <img src="icon/mail.png" alt="Email" class="button-icon">
+                        <span>📧 Email Prioritaire</span>
                     </a>
                 </div>
             </div>
@@ -93,16 +98,16 @@
             <!-- Informations supplémentaires -->
             <div class="offre-detail-infos">
                 <div class="detail-info-card">
-                    <h4>📍 Localisation Premium</h4>
-                    <p>Situé dans un quartier privilégié avec accès à toutes les commodités</p>
+                    <h4>🏆 Prestige Garanti</h4>
+                    <p>Residence de standing avec des finitions haut de gamme et des matériaux sélectionnés pour leur excellence.</p>
                 </div>
                 <div class="detail-info-card">
-                    <h4>🏠 Standing Élevé</h4>
-                    <p>Matériaux de qualité et finitions haut de gamme</p>
+                    <h4>📍 Emplacement d'Exception</h4>
+                    <p>Situé dans un quartier privilégié, à proximité de toutes les commodités et moyens de transport.</p>
                 </div>
                 <div class="detail-info-card">
-                    <h4>⚡ Livraison Rapide</h4>
-                    <p>Projet disponible dans les meilleurs délais</p>
+                    <h4>⚡ Investissement Rentable</h4>
+                    <p>Opportunité unique avec un potentiel de valorisation exceptionnel dans un marché en croissance.</p>
                 </div>
             </div>
         </div>
@@ -122,16 +127,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialisation du slider gallery
             var gallerySplide = new Splide('.offre-detail-gallery .splide', {
                 type: 'fade',
                 rewind: true,
                 pagination: true,
                 arrows: true,
                 autoplay: true,
-                interval: 5000,
+                interval: 4000,
                 pauseOnHover: true,
-                pauseOnFocus: true
+                pauseOnFocus: true,
+                speed: 1000,
+                drag: true
             });
             gallerySplide.mount();
         });
