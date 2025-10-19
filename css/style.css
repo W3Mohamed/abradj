@@ -16,9 +16,6 @@
     font-weight: weight;
     font-style: normal;
 }
-body{
-    
-}
 /*============================================================
                     navbar
 ===============================================================*/
@@ -2138,7 +2135,6 @@ ul li.dropdown:hover .dropdown-menu {
     color: #1a1a1a;
     margin-bottom: 15px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -2148,7 +2144,6 @@ ul li.dropdown:hover .dropdown-menu {
     line-height: 1.6;
     margin-bottom: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -4227,7 +4222,6 @@ footer .copyright a{
     margin-bottom: 15px;
     line-height: 1.4;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 2.8em;
@@ -4239,7 +4233,6 @@ footer .copyright a{
     color: #6b7280;
     margin-bottom: 25px;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 5.1em;
@@ -4777,7 +4770,6 @@ footer .copyright a{
     line-height: 1.3;
     font-family: 'Playfair Display', serif;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 1.3em;
@@ -4814,7 +4806,6 @@ footer .copyright a{
     margin-bottom: 25px;
     font-weight: 300;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 3.2em;
@@ -4828,7 +4819,6 @@ footer .copyright a{
     display: block;
     font-family: 'Playfair Display', serif;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
