@@ -43,15 +43,6 @@
             <p>Chez ABRAJ ISKAN, nous sélectionnons rigoureusement chaque matériau pour garantir durabilité, esthétique et performance à vos futurs espaces de vie.</p>
         </div>
 
-        <!-- Filtres optionnels -->
-        <div class="materiaux-filters">
-            <button class="materiaux-filter active">Tous les matériaux</button>
-            <button class="materiaux-filter">Revêtements</button>
-            <button class="materiaux-filter">Équipements</button>
-            <button class="materiaux-filter">Isolation</button>
-            <button class="materiaux-filter">Sanitaires</button>
-        </div>
-
         <!-- Grid des matériaux -->
         <div class="materiaux-grid">
             <?php
@@ -91,26 +82,6 @@
             <?php } ?>
         </div>
     </div>
-
-    <script>
-        // Script pour les filtres (optionnel)
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.materiaux-filter');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Retirer la classe active de tous les boutons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Ajouter la classe active au bouton cliqué
-                    this.classList.add('active');
-                    
-                    // Ici vous pouvez ajouter la logique de filtrage
-                    // const filterValue = this.textContent;
-                    // filterMateriaux(filterValue);
-                });
-            });
-        });
-    </script>
     <!--====================================================
                         contact
     =======================================================-->
