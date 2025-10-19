@@ -5427,22 +5427,267 @@ footer .copyright a{
     }
 }
 /*=================materiel========================*/
-.page-about .images{
-  display: flex;
-  flex-wrap: wrap;
+/* Page Matériels de Construction */
+.page-materiaux {
+    padding: 120px 8%;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }
-.page-about .images img{
-  margin-top: 20px;
-  margin-left: 2%;
-  width: 31.3%;
-  height: 300px;
-  border-radius: 5px;
-  transition-duration: .3s;
+
+.materiaux-header {
+    text-align: center;
+    margin-bottom: 80px;
 }
-.page-about .images img:hover{
-  transform: scale(1.03);
+
+.materiaux-header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
 }
-#capacite{
-  text-align: center;
-  margin: 40px 0;
+
+.materiaux-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a96e, #e8d9b5);
+    border-radius: 2px;
+}
+
+.materiaux-header p {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Grid des matériaux */
+.materiaux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Cartes matériaux */
+.materiau-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    border: 1px solid #f1f5f9;
+}
+
+.materiau-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    border-color: #c9a96e;
+}
+
+.materiau-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.materiau-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.materiau-card:hover .materiau-image img {
+    transform: scale(1.1);
+}
+
+.materiau-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.materiau-card:hover .materiau-overlay {
+    opacity: 1;
+}
+
+.materiau-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #c9a96e;
+    color: #1a1a1a;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.materiau-card:hover .materiau-badge {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.materiau-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.materiau-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.materiau-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.materiau-specs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.materiau-spec {
+    background: #f8fafc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Section d'introduction */
+.materiaux-intro {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.materiaux-intro h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.materiaux-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6b7280;
+    font-weight: 300;
+}
+/* État vide */
+.materiaux-empty {
+    text-align: center;
+    padding: 100px 20px;
+    color: #6b7280;
+    grid-column: 1 / -1;
+}
+
+.materiaux-empty h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .materiaux-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-materiaux {
+        padding: 80px 5%;
+    }
+    
+    .materiaux-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .materiaux-header p {
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+    
+    .materiaux-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .materiau-image {
+        height: 250px;
+    }
+    
+    .materiau-content {
+        padding: 25px;
+    }
+    
+    .materiaux-intro {
+        margin-bottom: 60px;
+    }
+    
+    .materiaux-intro h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-materiaux {
+        padding: 60px 5%;
+    }
+    
+    .materiaux-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .materiaux-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .materiau-image {
+        height: 220px;
+    }
+    
+    .materiau-content {
+        padding: 20px;
+    }
+    
+    .materiau-title {
+        font-size: 1.2rem;
+    }
 }
