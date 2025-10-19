@@ -47,10 +47,15 @@
                         $titre = $row['libelle'];
                         $description = $row['description'];
                         $prix = $row['prix'];
+                        $adresse = $row['adresse'];
                         
                         // Limiter le titre à 50 caractères
                         if(strlen($titre) > 50) {
                             $titre = substr($titre, 0, 50) . '...';
+                        }
+
+                        if(strlen($adresse) > 50) {
+                            $titre = substr($adresse, 0, 50) . '...';
                         }
                         
                         // Limiter la description à 120 caractères
@@ -78,7 +83,7 @@
                         <span class="offre-type"><?=$row['type']?></span>
                         
                         <div class="offre-location">
-                            <?=$row['adresse']?>
+                            <?=$adresse?>
                         </div>
                         
                         <p class="offre-description"><?=htmlspecialchars($description)?></p>
