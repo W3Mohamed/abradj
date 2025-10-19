@@ -54,8 +54,9 @@
                             $titre = substr($titre, 0, 50) . '...';
                         }
 
+                        // CORRECTION : Limiter l'adresse à 50 caractères (pas le titre)
                         if(strlen($adresse) > 50) {
-                            $titre = substr($adresse, 0, 50) . '...';
+                            $adresse = substr($adresse, 0, 50) . '...'; // Variable corrigée
                         }
                         
                         // Limiter la description à 120 caractères
@@ -83,7 +84,7 @@
                         <span class="offre-type"><?=$row['type']?></span>
                         
                         <div class="offre-location">
-                            <?=$adresse?>
+                            <?=htmlspecialchars($adresse)?> <!-- Variable corrigée -->
                         </div>
                         
                         <p class="offre-description"><?=htmlspecialchars($description)?></p>

@@ -3562,6 +3562,9 @@ footer .copyright a{
 /*==============================================================
                         page offres
 ==================================================================*/
+/*==============================================================
+                        page offres
+==================================================================*/
 .page-offres {
     padding: 100px 8%;
     background: #ffffff;
@@ -3569,7 +3572,7 @@ footer .copyright a{
 
 .offres-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 80px; /* Cette marge devrait fonctionner */
 }
 
 .offres-header h1 {
@@ -3795,11 +3798,13 @@ footer .copyright a{
     color: #ffffff;
     border-color: #c9a96e;
 }
+
 /* État vide stylisé */
 .offres-empty {
     text-align: center;
     padding: 100px 20px;
     color: #6b7280;
+    grid-column: 1 / -1; /* Prend toute la largeur du grid */
 }
 
 .offres-empty h3 {
@@ -3821,6 +3826,10 @@ footer .copyright a{
 @media (max-width: 768px) {    
     .page-offres {
         padding: 80px 5%;
+    }
+    
+    .offres-header {
+        margin-bottom: 60px; /* Réduit sur mobile */
     }
     
     .offres-header h1 {
@@ -3846,12 +3855,17 @@ footer .copyright a{
 }
 
 @media (max-width: 480px) {
+    .offres-header {
+        margin-bottom: 50px;
+    }
+    
     .offres-header h1 {
         font-size: 2rem;
     }
     
     .offres {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .offre h2 {
@@ -3860,11 +3874,6 @@ footer .copyright a{
     
     .offre-price {
         font-size: 1.5rem;
-    }
-    
-    .filter-button {
-        padding: 12px 20px;
-        font-size: 0.8rem;
     }
 }
 /*==============================================================
