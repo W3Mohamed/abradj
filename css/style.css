@@ -3466,43 +3466,410 @@ footer .copyright a{
 /*==============================================================
                       page-about
 ==================================================================*/
-.page-about{
-  margin: 100px 8%;
+/* Page About moderne */
+.page-about {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
 }
-.page-about .container{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 100px 0;
+
+.page-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a96e, transparent);
 }
-.page-about .container .item{
-  flex: 1;
-  margin: 0 20px;
+
+/* Container principal */
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
-.page-about .container .item img{
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  padding: 20px ;
+
+/* Section hero */
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
 }
-.page-about .item h3{
-  color: var(--doree);
-  margin: 10px 0;
+
+.about-content {
+    padding-right: 40px;
 }
-.page-about .item h1{
-  font-size: 40px;
-  margin: 20px 0;
+
+.about-badge {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c9a96e;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    display: block;
 }
-.page-about .item p{
-  margin: 20px 0;
-  line-height: 26px;
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
-@media screen and (max-width:900px) {
-  .page-about{
-    margin: 100px 2%;
-  }
-  .page-about .container{
-    flex-direction: column;
-  }
+
+.about-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #6b7280;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+/* Image hero */
+.about-visual {
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* Section mission */
+.about-mission {
+    background: #ffffff;
+    padding: 80px;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    margin-bottom: 100px;
+    border: 1px solid #f1f5f9;
+}
+
+.mission-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.mission-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a96e, #e8d9b5);
+    border-radius: 2px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.mission-card {
+    background: #f8fafc;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #c9a96e, #e8d9b5);
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.mission-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.mission-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Section services */
+.about-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.services-visual {
+    position: relative;
+}
+
+.services-image {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.services-content {
+    padding-left: 40px;
+}
+
+.services-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.services-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a96e, #e8d9b5);
+    border-radius: 2px;
+}
+
+/* FAQ moderne */
+.services-faq {
+    margin-top: 50px;
+}
+
+.faq-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Section innovation */
+.about-innovation {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+    padding: 80px;
+    border-radius: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.innovation-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.innovation-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #9ca3af;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .about-hero,
+    .about-services {
+        gap: 60px;
+    }
+    
+    .about-title {
+        font-size: 3rem;
+    }
+    
+    .mission-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 968px) {
+    .about-hero,
+    .about-services {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .about-content {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .services-content {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .services-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-image,
+    .services-image {
+        height: 500px;
+    }
+    
+    .about-mission,
+    .about-innovation {
+        padding: 60px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-about {
+        padding: 80px 0;
+    }
+    
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .mission-title,
+    .services-title {
+        font-size: 2rem;
+    }
+    
+    .about-image,
+    .services-image {
+        height: 400px;
+    }
+    
+    .about-mission,
+    .about-innovation {
+        padding: 50px 30px;
+    }
+    
+    .mission-card {
+        padding: 30px 25px;
+    }
+    
+    .faq-item {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-about {
+        padding: 60px 0;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .mission-title,
+    .services-title,
+    .innovation-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-image,
+    .services-image {
+        height: 300px;
+    }
+    
+    .about-mission,
+    .about-innovation {
+        padding: 40px 25px;
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-item {
+        padding: 20px;
+    }
 }
 /*==============================================================
                       page-blog
