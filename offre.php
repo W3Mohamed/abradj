@@ -82,15 +82,15 @@
                 <div class="detail-contact-buttons">
                     <a href="tel:0<?=$info['tel2']?>" class="detail-contact-button phone">
                         <img src="icon/phone.png" alt="Téléphone" class="button-icon">
-                        <span>📞 Appel Immédiat</span>
+                        <span>Appel Immédiat</span>
                     </a>
                     <a href="https://wa.me/0<?=$info['tel1']?>?text=🚀 Bonjour, je suis TRÈS intéressé par l'offre : <?=urlencode($row['libelle'])?> - <?=urlencode($row['prix'])?>" class="detail-contact-button whatsapp">
                         <img src="icon/whatsapp.png" alt="WhatsApp" class="button-icon">
-                        <span>💬 WhatsApp Express</span>
+                        <span>WhatsApp Express</span>
                     </a>
                     <a href="mailto:<?=$info['email']?>?subject=🚀 URGENT - Demande pour : <?=urlencode($row['libelle'])?>&body=Bonjour, je souhaite réserver une visite pour cette offre au plus vite." class="detail-contact-button email">
                         <img src="icon/mail.png" alt="Email" class="button-icon">
-                        <span>📧 Email Prioritaire</span>
+                        <span>Email Prioritaire</span>
                     </a>
                 </div>
             </div>

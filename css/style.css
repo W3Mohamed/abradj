@@ -5477,12 +5477,7 @@ ul li.dropdown:hover .dropdown-menu {
 .detail-contact-button .button-icon {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
-}
-
-.detail-contact-button.email .button-icon {
-    filter: brightness(0) invert(0);
 }
 
 .detail-contact-button:hover .button-icon {
@@ -6119,7 +6114,6 @@ ul li.dropdown:hover .dropdown-menu {
 .process-title {
     font-size: 2.2rem;
     font-weight: 300;
-    color: #1a1a1a;
     margin-bottom: 50px;
     text-align: center;
     font-family: 'Playfair Display', serif;
