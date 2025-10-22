@@ -15,206 +15,366 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-}
-/*============================================================
-                    navbar
+}/*============================================================
+                    TOP BAR (bande)
 ===============================================================*/
-.bande{
-  height: 45px;
-  background-color: var(--doree);
-  color: var(--blanc);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
+.top-bar-vision {
+    background-color: var(--doree);
+    height: 40px;
+    color: var(--blanc);
+    font-size: 0.9rem;
 }
-.bande a{
-  text-decoration: none;
-  color: var(--blanc);
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
+.top-bar-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.bande .social{
-  display: flex;
-  align-items: center;
+.top-bar-vision .social-links {
+    display: flex;
+    align-items: center;
 }
-.bande .social img{
-  width: 20px;
+.top-bar-vision .social-links a {
+    margin-left: 15px;
+    line-height: 0;
 }
-nav {
-    padding: 0px 5%;
-    height: 80px;
+.top-bar-vision .social-links img {
+    width: 18px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.top-bar-vision .social-links a:hover img {
+    opacity: 1;
+}
+
+.virtual-link {
+    text-decoration: none;
+    color: var(--blanc);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.virtual-link .icon-vr {
+    font-size: 0.7rem;
+    font-weight: bold;
+    background: var(--blanc);
+    color: var(--doree);
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+/*============================================================
+                    MAIN NAVBAR (nav)
+===============================================================*/
+.main-navbar {
+    background-color: var(--blanc); /* Fond blanc élégant */
+    height: 90px;
+    position: sticky; /* Rendre la nav sticky */
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    z-index: 999;
-    overflow: hidden;
-  }
-  nav .logo {
-    display: flex;
-    align-items: center;
-  }
-  nav .logo img {
-    height: 50px;
-    width: 200px;
-    margin-right: 10px;
-  }
-  nav .logo h1 {
-    font-size: 1.1rem;
-    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  nav ul {
+}
+
+.logo-brand img {
+    height: 55px; /* Taille légèrement ajustée pour le logo */
+    width: auto;
+}
+
+.nav-menu {
     list-style: none;
     display: flex;
-  }
-  nav ul li {
-    margin-left: 1.5rem;
-  }
-  nav ul li a {
+    padding: 0;
+    margin: 0;
+}
+.nav-menu li {
+    margin: 0 15px;
+}
+.nav-menu li a {
     text-decoration: none;
-    color: var(--doree);
-    font-size: 95%;
-    font-weight: 400;
-    padding: 25px 8px;
+    color: var(--noir); /* Liens en noir pour le contraste */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--doree); /* Couelur dorée au survol */
+    background: none; /* Supprimer le fond au survol pour un look plus épuré */
+}
+
+/* Soulignement subtil pour les liens au survol */
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--doree);
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+.nav-menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Bouton Contact (Clair) */
+.btn-contact-nav {
+    text-decoration: none;
+    background-color: var(--doree);
+    color: var(--blanc) !important;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  nav ul li a:hover {
-    background-color: #f5f5f5;
-  }
-  
-/* Style de base pour la dropdown */
-ul li.dropdown {
-  position: relative;
+    box-shadow: 0 5px 15px rgba(201, 169, 110, 0.4);
+}
+.btn-contact-nav:hover {
+    background-color: #b38b4f; /* Assombrir légèrement */
+    transform: translateY(-2px);
+    color: var(--blanc) !important;
+    box-shadow: 0 8px 20px rgba(201, 169, 110, 0.6);
+}
+.btn-contact-nav::after { /* Supprimer le soulignement pour le bouton */
+    display: none !important; 
 }
 
-ul li .dropdown-menu {
-  display: none;
-  width: 130px;
-  position: absolute;
-  top: 200%;
-  left: 0;
-  background: white;
-  list-style: none;
-  padding: 10px 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
-  border-radius: 5px;
-  z-index: 9999;
+
+/*============================================================
+                    DROPDOWN (Menu déroulant)
+===============================================================*/
+.dropdown-nav {
+    position: relative;
+}
+.dropdown-toggle {
+    /* Ajout d'une petite flèche pour indiquer le menu déroulant */
+    padding-right: 20px !important;
+}
+.dropdown-toggle::after {
+    content: '▾'; 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+.dropdown-nav:hover .dropdown-toggle::after {
+    transform: translateY(-50%) rotate(180deg);
 }
 
-ul li .dropdown-menu li {
-  padding: 0;
+.dropdown-menu-nav {
+    display: none;
+    width: 180px;
+    position: absolute;
+    top: 100%; /* S'affiche juste sous le lien */
+    left: 0;
+    background: var(--blanc);
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border-top: 3px solid var(--doree); /* Ligne dorée en haut */
+    z-index: 1010;
+    margin-top: 5px;
 }
 
-ul li .dropdown-menu li a {
-  color: var(--doree);
-  padding: 10px;
-  display: block;
-  text-decoration: none;
+.dropdown-menu-nav li {
+    margin: 0;
 }
 
-ul li .dropdown-menu li a:hover {
-  background-color: #f5f5f5;
+.dropdown-menu-nav li a {
+    color: var(--noir);
+    padding: 8px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
 }
-/* Affichage au survol */
-ul li.dropdown:hover .dropdown-menu {
-  display: block;
+.dropdown-menu-nav li a::after { /* Supprimer le soulignement */
+    display: none;
 }
 
-  .hamburger {
+.dropdown-menu-nav li a:hover {
+    background-color: var(--gris-clair); /* Fond gris clair au survol */
+    color: var(--doree);
+}
+
+.dropdown-nav:hover .dropdown-menu-nav {
+    display: block;
+    /* Animation subtile à l'apparition */
+    animation: fadeInSlide 0.3s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*============================================================
+                    HAMBURGER & MOBILE MENU
+===============================================================*/
+.hamburger {
     display: none;
     cursor: pointer;
-  }
-  
-  .hamburger .line {
-    width: 25px;
-    height: 1px;
-    background-color: #1f1f1f;
+    z-index: 1020;
+}
+
+.hamburger .line {
+    width: 28px;
+    height: 2px;
+    background-color: var(--noir); /* Lignes noires */
     display: block;
-    margin: 7px auto;
+    margin: 6px auto;
     transition: all 0.3s ease-in-out;
-  }
-  .hamburger-active {
-    transition: all 0.3s ease-in-out;
-    transition-delay: 0.6s;
-    transform: rotate(45deg);
-  }
-  
-  .hamburger-active .line:nth-child(2) {
-    width: 0px;
-  }
-  
-  .hamburger-active .line:nth-child(1),
-  .hamburger-active .line:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-  
-  .hamburger-active .line:nth-child(1) {
-    transform: translateY(12px);
-  }
-  
-  .hamburger-active .line:nth-child(3) {
-    transform: translateY(-5px) rotate(90deg);
-  }
-  
-  .menubar {
-    position: absolute;
+}
+
+/* Le reste des styles Hamburger (hamburger-active) peut rester le même car il gère l'animation */
+/* Le JS gère l'ajout/suppression de la classe `hamburger-active` */
+
+.menubar-mobile {
+    position: fixed;
     top: 0;
-    left: -60%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60%;
+    /* Changement de position et de largeur pour un menu moderne */
+    right: -100%; 
+    width: 80%; /* Occupe 80% de l'écran mobile */
+    max-width: 300px;
     height: 100vh;
-    padding: 20% 0;
-    background: rgba(255, 255, 255);
-    transition: all 0.5s ease-in;
-    z-index: 999;
-  }
-  .active {
-    left: 0;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  
-  .menubar ul {
-    padding: 0;
+    padding: 100px 30px; /* Espace pour le contenu */
+    background: var(--blanc);
+    transition: all 0.4s ease-in-out;
+    z-index: 990;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.menubar-mobile.active { /* Classe gérée par JS */
+    right: 0;
+}
+
+.menubar-mobile ul {
     list-style: none;
-  }
-  .menubar ul li {
-    margin-bottom: 32px;
-  }
-  
-  .menubar ul li a {
+    padding: 0;
+    margin: 0;
+}
+.menubar-mobile ul li {
+    margin-bottom: 20px;
+}
+
+.menubar-mobile ul li a {
     text-decoration: none;
-    color: #000;
-    font-size: 95%;
-    font-weight: 400;
-    padding: 5px 10px;
+    color: var(--noir);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 10px;
+    display: block;
     border-radius: 5px;
-  }
-  
-  .menubar ul li a:hover {
-    background-color: #f5f5f5;
-  }
-  @media screen and (max-width: 790px) {
+    transition: background-color 0.2s;
+}
+
+.menubar-mobile ul li a:hover {
+    background-color: var(--gris-clair);
+    color: var(--doree);
+}
+
+/* Style spécifique pour les sous-menus mobiles */
+.menubar-mobile .dropdown-menu-nav {
+    position: static; /* S'affiche en ligne */
+    box-shadow: none;
+    border: none;
+    padding: 10px 0 0 15px;
+    margin-top: 0;
+    display: block; /* Peut être affiché/masqué par JS si nécessaire */
+}
+.menubar-mobile .dropdown-menu-nav li a {
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+/* Ajout d'une couleur d'accentuation pour le lien Contact Mobile */
+.menubar-mobile .mobile-contact-item a {
+    color: var(--doree);
+    font-weight: 600;
+}
+
+/*============================================================
+                    MEDIA QUERIES
+===============================================================*/
+@media screen and (max-width: 1100px) {
+    /* Cache le bouton contact et certains liens pour éviter l'encombrement sur les écrans plus petits */
+    .btn-contact-nav {
+        display: none; 
+    }
+    .nav-menu li:nth-last-child(2),
+    .nav-menu li:nth-last-child(3) { /* Paiement & Matériel */
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-menu li {
+        margin: 0 10px;
+    }
+    .nav-menu {
+        /* Cacher la navigation principale */
+        display: none; 
+    }
+    .top-bar-vision {
+        height: auto;
+        padding: 5px 0;
+    }
+    .top-bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .virtual-link {
+        margin-bottom: 5px;
+    }
     .hamburger {
-      display: block;
+        display: block; /* Afficher l'icône hamburger */
     }
-    nav ul {
-      display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .main-navbar {
+        height: 70px;
     }
-  }
+    .logo-brand img {
+        height: 45px;
+    }
+    .menubar-mobile {
+        width: 100%; /* Pleine largeur sur très petit écran */
+        max-width: none;
+    }
+    .virtual-link {
+        font-size: 0.85rem;
+    }
+}
 /*==============================================================
                     HERO SECTION - MODERN DESIGN
 ==================================================================*/

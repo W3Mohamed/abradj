@@ -1,5 +1,5 @@
 const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".menubar");
+const navbar = document.querySelector(".menubar-mobile");
 
 const toggleNav = () => {
   navbar.classList.toggle("active");
