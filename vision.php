@@ -22,74 +22,79 @@
         $sqlStates->execute();
         $rows = $sqlStates->fetchAll();
     ?>
-
-    <div class="header-projet">
-        <img src="img/service.webp" alt="services immobiliere" class="headImg">
-        <div class="texte">
-            <p>Abraj Iskan</p>
-            <h1>Notre vision</h1>
-        </div>
-    </div>
     <!--====================================================
                         vision
     =======================================================-->
-    <div class="page-vision">
-        <div class="vision-container">
-            <!-- En-tête -->
-            <div class="vision-header">
-                <span class="vision-badge">Abraj iskan promotion immobiliere</span>
-                <h1 class="vision-title">Notre Vision</h1>
+    <section class="vision-section">
+        <div class="container-vision">
+            
+            <header class="vision-main-header">
+                <span class="tagline">Abraj iskan promotion immobiliere</span>
+                <h2 class="section-title">Notre Vision</h2>
+            </header>
+
+            <div class="vision-core-content">
+                
+                <div class="vision-text-block">
+                    <p class="intro-paragraph">
+                        Notre vocation principale est de transcender les attentes en matière de logement en offrant des résidences haut de gamme qui allient élégance, fonctionnalité et durabilité. Nous comprenons l'importance de créer des espaces qui vont au-delà de simples structures, mais qui incarnent véritablement le concept de foyer.
+                    </p>
+                    
+                    <p class="body-paragraph">
+                        À chaque étape de nos projets, de la conception initiale à la réalisation finale, nous maintenons un engagement ferme envers l'excellence. Notre équipe talentueuse d'architectes, d'urbanistes et de professionnels de la construction travaille de concert pour donner vie à des environnements résidentiels exceptionnels, reflétant les plus hauts standards de qualité et de design.
+                    </p>
+                    
+                    <p class="body-paragraph">
+                        Abraj iskan promotion immobiliere est une entreprise compétente et ambitieuse qui construit des logements contemporains de haute qualité, tout en réalisant un équilibre esthétique et fonctionnel au sein de ses résidences promotionnelles une passion pour la qualité et la modernité.
+                    </p>
+                    
+                    <p class="body-paragraph">
+                        En utilisant les dernières technologies du domaine de la construction, nous participons activement à la modernisation du monde immobilier de cette région, ont vu le jour avec des appartements grands standing, grâce aux compétences de nos équipes d'experts en bâtiments, de nos bureaux d'études, de nos architectes, de nos ingénieurs en génie civil ainsi que notre personnel exécutif.
+                    </p>
+                    
+                    <p class="body-paragraph">
+                        Notre équipe de professionnels à votre écoute qui saura vous conseiller, vous aider pour faire votre choix et vous proposer des solutions.
+                    </p>
+                    
+                    <p class="body-paragraph">
+                        La mission principale de ABRAJ ISKAN promotion immobilier est de mettre sa performance, sa compétence et son énergie pour satisfaire et fidéliser ses clients qui sont à la base sa priorité dans ses projets.
+                    </p>
+                </div>
+
+                <div class="vision-visual-block">
+                    <blockquote class="vision-quote">
+                        "Construire l'excellence, créer le foyer de demain."
+                    </blockquote>
+                    </div>
+                
             </div>
 
-            <!-- Contenu principal -->
-            <div class="vision-content">
-                <p class="vision-text">
-                    Notre vocation principale est de transcender les attentes en matière de logement en offrant des résidences haut de gamme qui allient élégance, fonctionnalité et durabilité. Nous comprenons l'importance de créer des espaces qui vont au-delà de simples structures, mais qui incarnent véritablement le concept de foyer.
-                </p>
-                
-                <p class="vision-text">
-                    À chaque étape de nos projets, de la conception initiale à la réalisation finale, nous maintenons un engagement ferme envers l'excellence. Notre équipe talentueuse d'architectes, d'urbanistes et de professionnels de la construction travaille de concert pour donner vie à des environnements résidentiels exceptionnels, reflétant les plus hauts standards de qualité et de design.
-                </p>
-                
-                <p class="vision-text">
-                    Abraj iskan promotion immobiliere est une entreprise compétente et ambitieuse qui construit des logements contemporains de haute qualité, tout en réalisant un équilibre esthétique et fonctionnel au sein de ses résidences promotionnelles une passion pour la qualité et la modernité.
-                </p>
-                
-                <p class="vision-text">
-                    En utilisant les dernières technologies du domaine de la construction, nous participons activement à la modernisation du monde immobilier de cette région, ont vu le jour avec des appartements grands standing, grâce aux compétences de nos équipes d'experts en bâtiments, de nos bureaux d'études, de nos architectes, de nos ingénieurs en génie civil ainsi que notre personnel exécutif.
-                </p>
-                
-                <p class="vision-text">
-                    Notre équipe de professionnels à votre écoute qui saura vous conseiller, vous aider pour faire votre choix et vous proposer des solutions.
-                </p>
-                
-                <p class="vision-text">
-                    La mission principale de ABRAJ ISKAN promotion immobilier est de mettre sa performance, sa compétence et son énergie pour satisfaire et fidéliser ses clients qui sont à la base sa priorité dans ses projets.
-                </p>
+            <div class="vision-key-values">
+                <h3 class="values-title">Nos Valeurs Fondamentales</h3>
+                <div class="values-grid">
+                    
+                    <div class="value-item">
+                        <span class="value-icon">🏛️</span>
+                        <h4 class="value-heading">Excellence Architecturale</h4>
+                        <p class="value-description">Des designs innovants qui allient esthétique et fonctionnalité</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <span class="value-icon">⭐</span>
+                        <h4 class="value-heading">Qualité Supérieure</h4>
+                        <p class="value-description">Matériaux haut de gamme et finitions impeccables</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <span class="value-icon">💫</span>
+                        <h4 class="value-heading">Service Client</h4>
+                        <p class="value-description">Accompagnement personnalisé à chaque étape</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Section valeurs (optionnelle) -->
-            <div class="vision-values">
-                <div class="value-card">
-                    <span class="value-icon">🏛️</span>
-                    <h3 class="value-title">Excellence Architecturale</h3>
-                    <p class="value-description">Des designs innovants qui allient esthétique et fonctionnalité</p>
-                </div>
-                
-                <div class="value-card">
-                    <span class="value-icon">⭐</span>
-                    <h3 class="value-title">Qualité Supérieure</h3>
-                    <p class="value-description">Matériaux haut de gamme et finitions impeccables</p>
-                </div>
-                
-                <div class="value-card">
-                    <span class="value-icon">💫</span>
-                    <h3 class="value-title">Service Client</h3>
-                    <p class="value-description">Accompagnement personnalisé à chaque étape</p>
-                </div>
-            </div>
         </div>
-    </div>
+    </section>
     <!--====================================================
                         contact
     =======================================================-->

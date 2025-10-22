@@ -42,7 +42,7 @@
           <a href="blog.php">Blog</a>
         </li>
         <li>
-          <a href="payement.php">Payement</a>
+          <a href="payement.php">Paiement</a>
         </li>
         <li>
           <a href="materiel.php">Capacité matériel</a>
@@ -82,7 +82,7 @@
           <a href="blog.php">Blog</a>
         </li>
         <li>
-          <a href="payement.php">Payement</a>
+          <a href="payement.php">Paiement</a>
         </li>
         <li>
           <a href="materiel.php">Capacité matériel</a>
