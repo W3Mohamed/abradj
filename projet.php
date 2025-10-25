@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+    require_once('dashboard/database.php');
+    $id_projet = $_GET['id_projet'];
+    $sqlProjet = $pdo->prepare('SELECT * FROM projet WHERE id_projet=?');
+    $sqlProjet->execute([$id_projet]);
+    $projet = $sqlProjet->fetch();
+?>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -12,19 +18,11 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
-    <title>Projet</title>
+    <title>Projet - <?= $projet['libelle'] ?></title>
+    <meta name="description" content="Découvrez notre projet immobilier <?= $projet['libelle'] ?>, alliant confort moderne et design élégant. Explorez les spécifications, la galerie d'images et contactez-nous pour plus d'informations.">
 </head>
 <body>
-
-    <?php
-        require_once('dashboard/database.php');
-        $id_projet = $_GET['id_projet'];
-        $sqlProjet = $pdo->prepare('SELECT * FROM projet WHERE id_projet=?');
-        $sqlProjet->execute([$id_projet]);
-        $projet = $sqlProjet->fetch();
-    ?>
     <?php include('partie/navbar.php') ?>
-
     <!-- Header moderne -->
     <div class="header-projet">
         <img src="img/projet.webp" alt="Abraj Iskan projet promotion immobiliere" class="headImg">
@@ -66,9 +64,13 @@
                     </svg>
                 </a>
             </div>
+            <?php
+                if($projet['video'] !="" && $projet['video'] != null){
+            ?>
             <div class="specs-video">
                 <video src="img/projet/<?=$projet['video']?>" controls poster="img/projet/<?=$projet['img_principale']?>"></video>
             </div>
+            <?php } ?>
         </div>
     </section>
 

@@ -12,7 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
-    <title>A propos</title>
+    <title>A propos - Abraj Iskan</title>
+    <meta name="description" content="Découvrez Abraj Iskan, promoteur immobilier spécialisé dans la construction de résidences haut standing en Algérie. Apprenez-en plus sur notre mission, nos valeurs et nos services dédiés à la qualité, l'innovation et la satisfaction client.">
 </head>
 <body>
     <?php

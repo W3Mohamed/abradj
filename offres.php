@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
-    <title>Offre</title>
+    <title>Offres de logements</title>
+    <meta name="description" content="Découvrez notre sélection exclusive d'appartements à Alger et Blida, allant du F2 au F7 duplex, situés dans les quartiers les plus prisés de la capitale.">
 </head>
 <body>
     <?php
         require_once('dashboard/database.php');
+        include('partie/navbar.php');
     ?>
-    <?php include('partie/navbar.php') ?>
 
     <!-- Header moderne -->
     <div class="header-projet">

@@ -12,7 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
-    <title>Capacité matériel</title>
+    <title>Capacité matériel - Abraj Iskan</title>
+    <meta name="description" content="Découvrez les matériaux de construction haut de gamme utilisés par Abraj Iskan pour garantir la qualité et la durabilité de nos projets immobiliers. Explorez notre sélection rigoureuse de matériaux pour des résidences exceptionnelles.">
 </head>
 <body>
     <?php

@@ -14,6 +14,7 @@
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
     <title>Abraj Iskan</title>
+    <meta name="description" content="Abraj Iskan - Promoteur Immobilier de Confiance. Découvrez nos projets immobiliers haut de gamme alliant confort, modernité et qualité de vie exceptionnelle. Construisons ensemble votre avenir dans des résidences d'exception.">
 </head>
 <body>
     <?php
