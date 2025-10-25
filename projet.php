@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
     require_once('dashboard/database.php');
     $id_projet = $_GET['id_projet'];
@@ -19,10 +20,14 @@
     <script src="js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/logo.webp">
     <title>Projet - <?= $projet['libelle'] ?></title>
-    <meta name="description" content="Découvrez notre projet immobilier <?= $projet['libelle'] ?>, alliant confort moderne et design élégant. Explorez les spécifications, la galerie d'images et contactez-nous pour plus d'informations.">
+    <meta name="description" content="<?= substr(strip_tags($projet['des1']), 0, 150) ?>...">
 </head>
 <body>
-    <?php include('partie/navbar.php') ?>
+
+    <?php
+        include('partie/navbar.php')
+    ?>
+
     <!-- Header moderne -->
     <div class="header-projet">
         <img src="img/projet.webp" alt="Abraj Iskan projet promotion immobiliere" class="headImg">
